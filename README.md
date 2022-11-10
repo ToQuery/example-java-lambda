@@ -1,1 +1,1 @@
-# example-java-lamdba
+# example-java-lambda
