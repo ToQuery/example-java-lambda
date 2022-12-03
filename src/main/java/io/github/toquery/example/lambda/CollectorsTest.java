@@ -153,6 +153,11 @@ public class CollectorsTest extends BaseTest {
         Map<String, Set<String>> namesByPressTreeMap = BOOKS.stream().collect(Collectors.groupingBy(Book::getPress, TreeMap::new, Collectors.mapping(Book::getName, Collectors.toSet())));
         log.info("{}testGroupingBy{}", separation, separation);
         CollectorsTest.printLog(namesByPressTreeMap);
+
+        // 根据出版社、作者 二级map
+        Map<String, Map<String, List<Book>>> pressAndAuthorMap = BOOKS.stream().collect(Collectors.groupingBy(Book::getPress, Collectors.groupingBy(Book::getAuthor)));
+        log.info("{}testGroupingBy{}", separation, separation);
+        CollectorsTest.printLog(pressAndAuthorMap);
     }
 
     /**
@@ -177,6 +182,9 @@ public class CollectorsTest extends BaseTest {
         CollectorsTest.printLog(booksPress);
     }
 
+    /**
+     *
+     */
     @Test
     public void testTeeing() {
         Map<String, Book> result1 = BOOKS.stream().collect(
@@ -211,6 +219,9 @@ public class CollectorsTest extends BaseTest {
 
     }
 
+    /**
+     *
+     */
     @Test
     public void testFiltering() {
         // 每个出版社分组，库存数量大于等于7 的数据，与下面的区别：即使不满足条件也会保留 key

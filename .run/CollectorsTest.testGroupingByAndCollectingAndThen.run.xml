@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CollectorsTest.testGroupingByAndCollectingAndThen" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <module name="example-java-lambda" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="io.github.toquery.example.lambda.data.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="io.github.toquery.example.lambda" />
+    <option name="MAIN_CLASS_NAME" value="io.github.toquery.example.lambda.CollectorsTest" />
+    <option name="METHOD_NAME" value="testGroupingByAndCollectingAndThen" />
+    <option name="TEST_OBJECT" value="method" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
