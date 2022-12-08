@@ -1,6 +1,6 @@
 package io.github.toquery.example.lambda;
 
-import io.github.toquery.example.lambda.collectors.BookCollectors;
+import io.github.toquery.example.lambda.core.collectors.BookCollectors;
 import io.github.toquery.example.lambda.entity.Book;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeAll;
@@ -85,7 +85,7 @@ public class CollectorsTest extends BaseTest {
 
         Optional<Book> maxOptionalBook1 = BOOKS.stream().max(Comparator.comparing(Book::getQuantity));
         log.info("{}testMinByOrMaxBy{}", separation, separation);
-        log.info("{}", maxOptionalBook1.get());
+        log.info("{}", maxOptionalBook1.orElseThrow());
 
         Optional<Book> maxOptionalBook2 = BOOKS.stream().collect(Collectors.maxBy(Comparator.comparing(Book::getQuantity)));
         log.info("{}testMinByOrMaxBy{}", separation, separation);

@@ -1,4 +1,4 @@
-package io.github.toquery.example.lambda.collectors;
+package io.github.toquery.example.lambda.core.collectors;
 
 import io.github.toquery.example.lambda.entity.Book;
 
